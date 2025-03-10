@@ -7,8 +7,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.bound,
 		C3.Plugins.TiledBg,
 		C3.Behaviors.solid,
-		C3.Behaviors.Sin,
 		C3.Plugins.Keyboard,
+		C3.Behaviors.Sin,
 		C3.Plugins.Keyboard.Cnds.IsKeyDown,
 		C3.Plugins.Sprite.Acts.SetMirrored,
 		C3.Plugins.Sprite.Cnds.OnCollision,
@@ -27,12 +27,14 @@ self.C3_JsPropNameTable = [
 	{Blocky: 0},
 	{Solid: 0},
 	{Ground: 0},
-	{Sine: 0},
 	{Wall: 0},
 	{Keyboard: 0},
 	{Spikes: 0},
+	{Sine: 0},
 	{diamond: 0},
-	{Door: 0}
+	{Door: 0},
+	{Plat2: 0},
+	{TiledBackground: 0}
 ];
 
 self.InstanceType = {
@@ -43,5 +45,7 @@ self.InstanceType = {
 	Keyboard: class extends self.IInstance {},
 	Spikes: class extends self.ISpriteInstance {},
 	diamond: class extends self.ISpriteInstance {},
-	Door: class extends self.ISpriteInstance {}
+	Door: class extends self.ISpriteInstance {},
+	Plat2: class extends self.ITiledBackgroundInstance {},
+	TiledBackground: class extends self.ITiledBackgroundInstance {}
 }
